@@ -2,8 +2,9 @@ version: '3.8'
 
 services:
   controller:
-    image: yoneyan/vmmgr-controller
+    image: yoneyan/vmmgr-controller:master
     container_name: vmmgr
+    restart: always
     volumes:
       - ./config.json:/config.json
       - ./ssh:/root/.ssh
@@ -19,7 +20,7 @@ services:
     ports:
       - "8082:80"
   web:
-    image: yoneyan/vmmgr-web-admin
+    image: yoneyan/vmmgr-web-admin:master
     container_name: web-admin
     restart: always
     ports:

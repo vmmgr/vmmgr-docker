@@ -4,6 +4,7 @@ services:
   controller:
     image: yoneyan/vmmgr-controller:develop
     container_name: vmmgr
+    restart: always
     volumes:
       - ./config.json:/config.json
       - ./ssh:/root/.ssh
