@@ -1,3 +1,5 @@
 .idea
 docker-compose.yaml
 config.json
+ssh
+.ssh
